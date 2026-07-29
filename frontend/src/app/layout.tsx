@@ -3,7 +3,6 @@ import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
 import Script from "next/script";
 import { Toaster } from "sonner";
-import AuthSync from "@/components/AuthSync"; // Import the component
 
 export const metadata: Metadata = {
   title: "Toonashi | Your Premium Anime Destination",
@@ -20,7 +19,6 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body className="antialiased">
-          <AuthSync />
           <Toaster richColors closeButton position="top-right" theme="dark" />
           {children}
         </body>
